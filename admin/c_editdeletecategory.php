@@ -17,7 +17,7 @@
     $status=$row['status'];
   
 
-    echo "<form method=post action=edit.php>";
+    echo "<form method=post action=c_editcategoryprocess.php>";
     echo "<input type=hidden name=id value=$id>";
     echo "<input type=text name=category value=$category><br>";
     echo "<input type=text name=description value=$description><br>";

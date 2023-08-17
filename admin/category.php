@@ -23,7 +23,7 @@ $count=mysqli_num_rows($qry);
 </head>
 
 <body>
-<h2>We have <?php echo $count;?>Records</h2>
+<h2>We have <?php echo $count;?> Records</h2>
 
 <table border="1px">
  
@@ -44,7 +44,7 @@ $count=mysqli_num_rows($qry);
   echo "<td>".$row["category"]."</td>";
   echo "<td>".$row["description"]."</td>";
   echo "<td>".$row["status"]."</td>";
-  echo "<td> <a href =c_editdeletecategory.php?iid=$iid&action=edit>EDIT</a>
+  echo "<td> <a href ='c_editdeletecategory.php?iid=$iid&action=edit'>EDIT</a>
 
   <a href ='c_editdeletecategory.php?iid=$iid&action=delete'>DELETE</a>
   </td>";

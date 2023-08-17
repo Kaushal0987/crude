@@ -19,7 +19,7 @@
     $status=$row['status'];
   
 
-    echo "<form method=post action=edit.php>";
+    echo "<form method=post action=u_edituserprocess.php>";
     echo "<input type=hidden name=id value=$id>";
     echo "<input type=text name=username value=$username><br>";
     echo "<input type=text name=password value=$password><br>";
@@ -27,7 +27,7 @@
     echo "<input type=text name=role value=$role><br>";
     echo "<input type=text name=status value=$status><br>";
    
-    echo"<input type=submit name=Submit value=Edit>";
+    echo"<input type=submit name=submit value=edit>";
     echo"</form>";
    }
    break;
@@ -45,7 +45,8 @@
    break;
   }
 
-  default:{
+  default:
+  {
    echo"unable to process the command";
   }
  }

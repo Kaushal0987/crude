@@ -25,7 +25,7 @@ $count=mysqli_num_rows($qry);
 </head>
 
 <body>
-<h2>We have <?php echo $count;?>Records</h2>
+<h2>We have <?php echo $count;?> Records</h2>
 
 <table border="1px">
  
@@ -54,7 +54,7 @@ $count=mysqli_num_rows($qry);
   echo "<td>".$row["status"]."</td>";
   echo "<td>".$row["created_at"]."</td>";
   echo "<td>".$row["updated_at"]."</td>";
-  echo "<td> <a href =u_editdelete.php?iid=$iid&action=edit>EDIT</a>
+  echo "<td> <a href ='u_editdelete.php?iid=$iid&action=edit'>EDIT</a>
 
   <a href ='u_editdelete.php?iid=$iid&action=delete'>DELETE</a>
   </td>";

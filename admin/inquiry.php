@@ -22,7 +22,7 @@
  <title>inquiry</title>
 </head>
 <body>
-<h2>We have <?php echo $count;?>Records</h2>
+<h2>We have <?php echo $count;?> Records</h2>
 <table border="1px">
  <tr>
   <th>ID</th>
@@ -57,7 +57,7 @@
   echo "<td>".$row["status"]."</td>";
   echo "<td>".$row["created_at"]."</td>";
   echo "<td>".$row["updated_at"]."</td>";
-  echo "<td> <a href =i_editdeleteinquiry.php?iid=$iid&action=edit>EDIT</a>
+  echo "<td> <a href ='i_editdeleteinquiry.php?iid=$iid&action=edit'>EDIT</a>
    <a href ='i_editdeleteinquiry.php?iid=$iid&action=delete'>DELETE</a>
   </td>";
  }

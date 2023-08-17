@@ -20,7 +20,7 @@
     $message=$row['message'];
     $status=$row['status'];
 
-    echo "<form method=post action=editprocess.php>";
+    echo "<form method=post action=i_editinquiryprocess.php>";
     echo "<input type=hidden name=id value=$id>";
     echo "<input type=text name=firstname value=$firstname><br>";
     echo "<input type=text name=lastname value=$lastname><br>";
