@@ -2,10 +2,10 @@
 include("session.php");
 include("inc_header.php");
 
-echo "<a href='c_addcategory.php'>Add New Category<a>";
+echo "<a href='p_addpost.php'>Add New Category<a>";
 echo "<br>";
 
-$sql="SELECT * FROM category ORDER BY id DESC";
+$sql="SELECT * FROM post ORDER BY id DESC";
 
 include("connection.php");
 
@@ -19,7 +19,7 @@ $count=mysqli_num_rows($qry);
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>category</title>
+ <title>post</title>
 </head>
 
 <body>
@@ -30,7 +30,10 @@ $count=mysqli_num_rows($qry);
  <tr>
   <th>ID</th>
   <th>category</th>
+  <th>user_id</th>
+  <th>Title</th>
   <th>description</th>
+  <th>fimage</th>
   <th>status</th>
   <th>Function</th>
  </tr>
@@ -41,12 +44,15 @@ $count=mysqli_num_rows($qry);
   $iid=$row["id"];
   echo "<tr>";
   echo "<td>".$row["id"]."</td>";
-  echo "<td>".$row["category"]."</td>";
+  echo "<td>".$row["category_id"]."</td>";
+  echo "<td>".$row["user_id"]."</td>";
+  echo "<td>".$row["title"]."</td>";
   echo "<td>".$row["description"]."</td>";
+  echo "<td>".$row["fimage"]."</td>";
   echo "<td>".$row["status"]."</td>";
-  echo "<td> <a href ='c_editdeletecategory.php?iid=$iid&action=edit'>EDIT</a>
+  echo "<td> <a href ='p_editdeletepost.php?iid=$iid&action=edit'>EDIT</a>
 
-  <a href ='c_editdeletecategory.php?iid=$iid&action=delete'>DELETE</a>
+  <a href ='p_editdeletepost.php?iid=$iid&action=delete'>DELETE</a>
   </td>";
  }
 ?>
